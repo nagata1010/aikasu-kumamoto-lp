@@ -133,7 +133,7 @@
       animation: fadeInUp 0.6s ease;
     }
     .hero-date {
-      color: #666666;
+      color: #444444;
       font-size: 1rem;
       font-weight: 500;
       margin-bottom: 12px;
@@ -141,7 +141,7 @@
       animation: fadeInUp 0.7s ease;
     }
     .hero h1 {
-      color: #333333;
+      color: #000000;
       font-size: clamp(2rem, 5.5vw, 3.2rem);
       font-weight: 900;
       line-height: 1.3;
@@ -163,7 +163,7 @@
       border-radius: 2px;
     }
     .hero-sub {
-      color: #555555;
+      color: #333333;
       font-size: clamp(0.95rem, 2vw, 1.15rem);
       margin-bottom: 36px;
       animation: fadeInUp 0.9s ease;
@@ -227,18 +227,18 @@
       align-items: center;
       gap: 8px;
       background: transparent;
-      color: #fff;
+      color: #0099FF;
       font-size: 1rem;
       font-weight: 600;
       padding: 14px 32px;
       border-radius: 60px;
-      border: 2px solid rgba(255,255,255,0.4);
+      border: 2px solid #0099FF;
       cursor: pointer;
       transition: all 0.3s ease;
     }
     .btn-secondary:hover {
-      border-color: #fff;
-      background: rgba(255,255,255,0.1);
+      border-color: #0077CC;
+      background: rgba(0,153,255,0.08);
     }
 
     /* ===== PROBLEMS SECTION ===== */
@@ -262,15 +262,20 @@
     }
     .problem-card:hover { transform: translateY(-4px); }
     .problem-icon {
-      width: 56px;
-      height: 56px;
+      width: 72px;
+      height: 72px;
       border-radius: 12px;
       background: linear-gradient(135deg, #D4EEFF, #EEF7FF);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.6rem;
       margin-bottom: 16px;
+      padding: 10px;
+    }
+    .problem-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
     .problem-card h3 {
       font-size: 1.1rem;
@@ -301,18 +306,26 @@
     .solution-feature {
       text-align: center;
       padding: 40px 20px;
-      background: rgba(255,255,255,0.06);
+      background: #fff;
       border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid #E8F4FF;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
       transition: all 0.3s ease;
     }
     .solution-feature:hover {
-      background: rgba(255,255,255,0.12);
+      background: #F0F8FF;
       transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,153,255,0.1);
     }
     .solution-feature-icon {
-      font-size: 2.5rem;
-      margin-bottom: 16px;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 16px;
+    }
+    .solution-feature-icon img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
     .solution-feature h3 {
       font-size: 1rem;
@@ -321,7 +334,7 @@
     }
     .solution-feature p {
       font-size: 0.85rem;
-      color: rgba(255,255,255,0.6);
+      color: #666;
       line-height: 1.6;
     }
 
@@ -561,8 +574,8 @@
     .speaker-tag {
       font-size: 0.75rem;
       font-weight: 600;
-      background: #f0f0f8;
-      color: #F0F8FF;
+      background: #E8F4FF;
+      color: #0077CC;
       padding: 4px 14px;
       border-radius: 50px;
     }
@@ -588,7 +601,7 @@
     .overview-label {
       width: 160px;
       min-width: 160px;
-      background: #333333;
+      background: #0099FF;
       color: #fff;
       font-weight: 700;
       font-size: 0.85rem;
@@ -944,8 +957,8 @@
     .keynote-stat-tag {
       font-size: 0.7rem;
       font-weight: 600;
-      background: #f0f0f8;
-      color: #F0F8FF;
+      background: #E8F4FF;
+      color: #0077CC;
       padding: 3px 12px;
       border-radius: 50px;
       white-space: nowrap;
@@ -1083,21 +1096,22 @@
 
     /* ===== CONTACT FORM ===== */
     .contact-form-wrapper {
-      background: rgba(255,255,255,0.07);
-      border: 2px solid rgba(255,255,255,0.15);
+      background: #fff;
+      border: 2px solid #E8F4FF;
       border-radius: 20px;
       padding: 48px 36px;
       max-width: 700px;
       margin: 0 auto;
+      box-shadow: 0 4px 24px rgba(0,153,255,0.08);
     }
     .contact-form-wrapper h3 {
-      color: rgba(255,255,255,0.95);
+      color: #333333;
       font-size: 1.15rem;
       font-weight: 700;
       margin-bottom: 8px;
     }
     .contact-form-wrapper .form-note {
-      color: rgba(255,255,255,0.6);
+      color: #777777;
       font-size: 0.8rem;
       margin-bottom: 28px;
     }
@@ -1107,7 +1121,7 @@
     }
     .form-group label {
       display: block;
-      color: rgba(255,255,255,0.9);
+      color: #333333;
       font-size: 0.85rem;
       font-weight: 700;
       margin-bottom: 6px;
@@ -1124,8 +1138,8 @@
     }
     .form-group label .optional {
       display: inline-block;
-      background: rgba(255,255,255,0.2);
-      color: rgba(255,255,255,0.8);
+      background: #E8F4FF;
+      color: #777777;
       font-size: 0.65rem;
       padding: 1px 8px;
       border-radius: 4px;
@@ -1136,10 +1150,10 @@
     .form-group textarea {
       width: 100%;
       padding: 14px 16px;
-      border: 2px solid rgba(255,255,255,0.15);
+      border: 2px solid #E8F4FF;
       border-radius: 10px;
-      background: rgba(255,255,255,0.06);
-      color: #fff;
+      background: #FAFCFF;
+      color: #333333;
       font-size: 0.95rem;
       font-family: 'Noto Sans JP', sans-serif;
       transition: border-color 0.3s;
@@ -1147,12 +1161,12 @@
     }
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: rgba(255,255,255,0.35);
+      color: #aaa;
     }
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: #00D4FF;
-      background: rgba(255,255,255,0.1);
+      border-color: #0099FF;
+      background: #fff;
     }
     .form-group textarea {
       min-height: 100px;
@@ -1160,18 +1174,18 @@
     }
     .form-group .input-hint {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.45);
+      color: #999;
       margin-top: 4px;
     }
     .form-group .error-msg {
       font-size: 0.78rem;
-      color: #00D4FF;
+      color: #FF4444;
       margin-top: 4px;
       display: none;
     }
     .form-group.has-error input,
     .form-group.has-error textarea {
-      border-color: #00D4FF;
+      border-color: #FF4444;
     }
     .form-group.has-error .error-msg {
       display: block;
@@ -1215,7 +1229,7 @@
     }
     .form-privacy {
       font-size: 0.75rem;
-      color: rgba(255,255,255,0.45);
+      color: #999;
       margin-top: 16px;
     }
 
@@ -1226,9 +1240,10 @@
       padding: 60px 32px;
       max-width: 700px;
       margin: 0 auto;
-      background: rgba(255,255,255,0.07);
-      border: 2px solid rgba(255,255,255,0.15);
+      background: #fff;
+      border: 2px solid #E8F4FF;
       border-radius: 20px;
+      box-shadow: 0 4px 24px rgba(0,153,255,0.08);
     }
     .thankyou-screen.show {
       display: block;
@@ -1239,25 +1254,25 @@
       margin-bottom: 16px;
     }
     .thankyou-screen h3 {
-      color: #fff;
+      color: #333333;
       font-size: 1.5rem;
       font-weight: 900;
       margin-bottom: 12px;
     }
     .thankyou-screen p {
-      color: rgba(255,255,255,0.8) !important;
+      color: #555 !important;
       font-size: 0.95rem;
       line-height: 1.8;
       margin-bottom: 8px !important;
     }
     .thankyou-screen .thankyou-highlight {
       display: inline-block;
-      background: rgba(0,153,255,0.2);
-      border: 1px solid rgba(0,153,255,0.4);
+      background: #E8F4FF;
+      border: 1px solid #D4EEFF;
       border-radius: 10px;
       padding: 16px 24px;
       margin-top: 20px;
-      color: #00D4FF;
+      color: #0077CC;
       font-weight: 700;
       font-size: 0.95rem;
     }
@@ -1338,17 +1353,17 @@
       <p class="section-sub reveal">多くの熊本企業が抱える新入社員育成の「3つの壁」</p>
       <div class="problems-grid">
         <div class="problem-card reveal">
-          <div class="problem-icon">&#128557;</div>
+          <div class="problem-icon"><img src="images/icon-lonely.svg" alt="孤立感"></div>
           <h3>同期不在による孤立感</h3>
           <p>少数採用では「同期」がおらず、不安や孤立感から早期離職につながるリスクが高まります。相談相手がいない環境が成長を阻みます。</p>
         </div>
         <div class="problem-card reveal">
-          <div class="problem-icon">&#128200;</div>
+          <div class="problem-icon"><img src="images/icon-training.svg" alt="育成"></div>
           <h3>育成ノウハウの不足・属人化</h3>
           <p>体系的な研修体制がなく、上司個人の経験頼みに。指導にバラつきが生まれ、新人の成長スピードに差が出てしまいます。</p>
         </div>
         <div class="problem-card reveal">
-          <div class="problem-icon">&#128531;</div>
+          <div class="problem-icon"><img src="images/icon-stumble.svg" alt="つまずき"></div>
           <h3>配属後の立ち上がりでつまずく</h3>
           <p>ビジネスマナー研修だけでは不十分。実務に入った途端に「何をすればいいかわからない」状態に陥り、成果が出るまで時間がかかります。</p>
         </div>
@@ -1364,22 +1379,22 @@
       <p class="section-sub reveal">知識の詰め込みではなく「行動が変わる」仕掛けを設計</p>
       <div class="solution-features">
         <div class="solution-feature reveal">
-          <div class="solution-feature-icon">&#127760;</div>
+          <div class="solution-feature-icon"><img src="images/icon-global.svg" alt="相互刺激"></div>
           <h3>合同開催による相互刺激</h3>
           <p>他社の新人と切磋琢磨。井の中の蛙にならない視野の広がりを提供します。</p>
         </div>
         <div class="solution-feature reveal">
-          <div class="solution-feature-icon">&#128170;</div>
+          <div class="solution-feature-icon"><img src="images/icon-meeting.svg" alt="体験型学習"></div>
           <h3>徹底した「体験型」学習</h3>
           <p>座学ではなくケースワーク中心。正解のない課題に向き合い、自ら考え動く力を鍛えます。</p>
         </div>
         <div class="solution-feature reveal">
-          <div class="solution-feature-icon">&#128065;</div>
+          <div class="solution-feature-icon"><img src="images/icon-observe.svg" alt="オブザーブ"></div>
           <h3>上司のオブザーブ参加</h3>
           <p>上司が新人の「素の行動」を観察。配属後の指導ポイントが明確になります。</p>
         </div>
         <div class="solution-feature reveal">
-          <div class="solution-feature-icon">&#128279;</div>
+          <div class="solution-feature-icon"><img src="images/icon-handshake.svg" alt="つながる設計"></div>
           <h3>配属後までつながる設計</h3>
           <p>研修で終わりではなく、1on1・行動ルール合意まで設計。定着まで伴走します。</p>
         </div>
@@ -1398,9 +1413,9 @@
       <div class="program-flow">
         <!-- STEP 0 - 合同入社式 -->
         <div class="program-step reveal">
-          <div class="program-step-marker" style="background: linear-gradient(135deg, #333333, #F0F8FF);">STEP<br>00</div>
+          <div class="program-step-marker" style="background: linear-gradient(135deg, #0077CC, #0099FF);">STEP<br>00</div>
           <div class="program-step-content" style="background: linear-gradient(135deg, #f8f9fa, #f0f0f8);">
-            <span class="program-step-tag" style="background: #333333; color: #fff;">合同入社式 &#8212; DAY1 午前</span>
+            <span class="program-step-tag" style="background: #0099FF; color: #fff;">合同入社式 &#8212; DAY1 午前</span>
             <h3>合同入社式 &amp; 基調講演</h3>
             <p>熊本の複数企業が一堂に会する合同入社式。企業の枠を越えた「地域の同期」が生まれる瞬間です。そして、基調講演には元サッカー日本代表・太田宏介氏が登壇。</p>
 
