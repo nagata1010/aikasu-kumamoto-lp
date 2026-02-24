@@ -14,7 +14,7 @@
     html { scroll-behavior: smooth; font-size: 16px; }
     body {
       font-family: 'Noto Sans JP', 'Inter', sans-serif;
-      color: #1a1a2e;
+      color: #333333;
       background: #fff;
       line-height: 1.8;
       overflow-x: hidden;
@@ -37,7 +37,7 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #e63946;
+      color: #0099FF;
       margin-bottom: 8px;
     }
     .section-title {
@@ -46,7 +46,7 @@
       line-height: 1.4;
       margin-bottom: 16px;
     }
-    .section-title span { color: #e63946; }
+    .section-title span { color: #0099FF; }
     .section-sub {
       font-size: 1rem;
       color: #555;
@@ -62,7 +62,7 @@
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: linear-gradient(90deg, #e63946, #ff6b6b);
+      background: linear-gradient(90deg, #0099FF, #00D4FF);
       color: #fff;
       text-align: center;
       padding: 10px 16px;
@@ -85,7 +85,7 @@
       align-items: center;
       justify-content: center;
       padding: 80px 24px 60px;
-      background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+      background: linear-gradient(135deg, #E8F4FF 0%, #F0F8FF 50%, #F5FAFF 100%);
       overflow: hidden;
     }
     .hero::before {
@@ -96,7 +96,7 @@
       width: 900px;
       height: 900px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(230,57,70,0.3) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0,153,255,0.3) 0%, transparent 70%);
       animation: float-circle 8s ease-in-out infinite;
     }
     .hero::after {
@@ -107,7 +107,7 @@
       width: 700px;
       height: 700px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,107,107,0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0,212,255,0.2) 0%, transparent 70%);
       animation: float-circle 10s ease-in-out infinite reverse;
     }
     @keyframes float-circle {
@@ -122,7 +122,7 @@
     }
     .hero-badge {
       display: inline-block;
-      background: rgba(230,57,70,0.9);
+      background: rgba(0,153,255,0.9);
       color: #fff;
       font-size: 0.8rem;
       font-weight: 700;
@@ -149,7 +149,7 @@
       animation: fadeInUp 0.8s ease;
     }
     .hero h1 .highlight {
-      color: #ff6b6b;
+      color: #00D4FF;
       position: relative;
     }
     .hero h1 .highlight::after {
@@ -159,7 +159,7 @@
       left: 0;
       width: 100%;
       height: 4px;
-      background: #e63946;
+      background: #0099FF;
       border-radius: 2px;
     }
     .hero-sub {
@@ -181,7 +181,7 @@
     .hero-stat-num {
       font-size: 2.5rem;
       font-weight: 900;
-      color: #ff6b6b;
+      color: #00D4FF;
       line-height: 1;
       font-family: 'Inter', sans-serif;
     }
@@ -207,7 +207,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       color: #fff;
       font-size: 1.05rem;
       font-weight: 700;
@@ -216,11 +216,11 @@
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(230,57,70,0.4);
+      box-shadow: 0 8px 30px rgba(0,153,255,0.4);
     }
     .btn-primary:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(230,57,70,0.5);
+      box-shadow: 0 12px 40px rgba(0,153,255,0.5);
     }
     .btn-secondary {
       display: inline-flex;
@@ -256,7 +256,7 @@
       background: #fff;
       border-radius: 16px;
       padding: 36px 28px;
-      border-left: 5px solid #e63946;
+      border-left: 5px solid #0099FF;
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       transition: transform 0.3s ease;
     }
@@ -265,7 +265,7 @@
       width: 56px;
       height: 56px;
       border-radius: 12px;
-      background: linear-gradient(135deg, #ffe0e3, #fff5f5);
+      background: linear-gradient(135deg, #D4EEFF, #EEF7FF);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -276,7 +276,7 @@
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 8px;
-      color: #1a1a2e;
+      color: #333333;
     }
     .problem-card p {
       font-size: 0.9rem;
@@ -287,11 +287,11 @@
     /* ===== SOLUTION SECTION ===== */
     .solution {
       padding: 100px 0;
-      background: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%);
-      color: #fff;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
+      color: #333333;
     }
-    .solution .section-title { color: #fff; }
-    .solution .section-sub { color: rgba(255,255,255,0.7); }
+    .solution .section-title { color: #333333; }
+    .solution .section-sub { color: #666666; }
     .solution-features {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -344,7 +344,7 @@
       left: 32px;
       width: 4px;
       height: 100%;
-      background: linear-gradient(to bottom, #e63946, #ff6b6b, #e63946);
+      background: linear-gradient(to bottom, #0099FF, #00D4FF, #0099FF);
       border-radius: 2px;
     }
     .program-step {
@@ -358,7 +358,7 @@
       min-width: 64px;
       height: 64px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -366,7 +366,7 @@
       font-weight: 900;
       font-size: 0.75rem;
       z-index: 2;
-      box-shadow: 0 4px 16px rgba(230,57,70,0.3);
+      box-shadow: 0 4px 16px rgba(0,153,255,0.3);
     }
     .program-step-content {
       background: #f8f9fa;
@@ -382,7 +382,7 @@
       font-size: 1.1rem;
       font-weight: 700;
       margin-bottom: 8px;
-      color: #1a1a2e;
+      color: #333333;
     }
     .program-step-content p {
       font-size: 0.9rem;
@@ -392,8 +392,8 @@
       display: inline-block;
       font-size: 0.7rem;
       font-weight: 700;
-      color: #e63946;
-      background: #ffe0e3;
+      color: #0099FF;
+      background: #D4EEFF;
       padding: 3px 10px;
       border-radius: 50px;
       margin-bottom: 8px;
@@ -429,10 +429,10 @@
       border-radius: 50%;
       background: rgba(255,255,255,0.1);
     }
-    .base-card.b { background: linear-gradient(135deg, #e63946, #c62828); }
-    .base-card.a { background: linear-gradient(135deg, #ff6b6b, #e63946); }
-    .base-card.s { background: linear-gradient(135deg, #302b63, #1a1a2e); }
-    .base-card.e { background: linear-gradient(135deg, #24243e, #302b63); }
+    .base-card.b { background: linear-gradient(135deg, #0099FF, #0077CC); }
+    .base-card.a { background: linear-gradient(135deg, #00D4FF, #0099FF); }
+    .base-card.s { background: linear-gradient(135deg, #F0F8FF, #D4EEFF); }
+    .base-card.e { background: linear-gradient(135deg, #F5FAFF, #F0F8FF); }
     .base-letter {
       font-size: 3rem;
       font-weight: 900;
@@ -478,15 +478,15 @@
       transition: all 0.3s ease;
     }
     .value-card:hover {
-      border-color: #e63946;
+      border-color: #0099FF;
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(230,57,70,0.1);
+      box-shadow: 0 12px 40px rgba(0,153,255,0.1);
     }
     .value-num {
       font-size: 3rem;
       font-weight: 900;
       font-family: 'Inter', sans-serif;
-      color: #e63946;
+      color: #0099FF;
       line-height: 1;
       margin-bottom: 12px;
     }
@@ -520,7 +520,7 @@
       width: 200px;
       height: 200px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #e63946, #302b63);
+      background: linear-gradient(135deg, #0099FF, #F0F8FF);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -533,7 +533,7 @@
     .speaker-info h3 {
       font-size: 0.8rem;
       font-weight: 700;
-      color: #e63946;
+      color: #0099FF;
       letter-spacing: 0.1em;
       margin-bottom: 4px;
     }
@@ -562,7 +562,7 @@
       font-size: 0.75rem;
       font-weight: 600;
       background: #f0f0f8;
-      color: #302b63;
+      color: #F0F8FF;
       padding: 4px 14px;
       border-radius: 50px;
     }
@@ -588,7 +588,7 @@
     .overview-label {
       width: 160px;
       min-width: 160px;
-      background: #1a1a2e;
+      background: #333333;
       color: #fff;
       font-weight: 700;
       font-size: 0.85rem;
@@ -606,7 +606,7 @@
     /* ===== DEADLINE SECTION ===== */
     .deadline-section {
       padding: 80px 0;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       color: #fff;
       text-align: center;
     }
@@ -662,13 +662,13 @@
     /* ===== CTA SECTION ===== */
     .cta-section {
       padding: 100px 0;
-      background: linear-gradient(135deg, #1a1a2e 0%, #302b63 100%);
+      background: linear-gradient(135deg, #FFFFFF 0%, #F0F8FF 100%);
       text-align: center;
-      color: #fff;
+      color: #333333;
     }
-    .cta-section .section-title { color: #fff; }
+    .cta-section .section-title { color: #333333; }
     .cta-section p {
-      color: rgba(255,255,255,0.7);
+      color: #666666;
       margin-bottom: 36px;
       font-size: 1rem;
     }
@@ -687,7 +687,7 @@
       color: rgba(255,255,255,0.8);
     }
     .cta-feature-icon {
-      color: #ff6b6b;
+      color: #00D4FF;
       font-size: 1.2rem;
     }
 
@@ -708,14 +708,14 @@
     .floating-cta .btn-primary {
       font-size: 0.95rem;
       padding: 14px 28px;
-      box-shadow: 0 8px 30px rgba(230,57,70,0.5);
+      box-shadow: 0 8px 30px rgba(0,153,255,0.5);
     }
     .floating-cta .btn-primary::before {
       content: '';
       position: absolute;
       inset: -3px;
       border-radius: 60px;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       z-index: -1;
       animation: pulse-ring 2s ease-in-out infinite;
     }
@@ -749,7 +749,7 @@
     .faq-q::after {
       content: '+';
       font-size: 1.4rem;
-      color: #e63946;
+      color: #0099FF;
       transition: transform 0.3s;
       flex-shrink: 0;
     }
@@ -771,7 +771,7 @@
 
     /* ===== FOOTER ===== */
     .footer {
-      background: #0f0c29;
+      background: #E8F4FF;
       color: rgba(255,255,255,0.5);
       text-align: center;
       padding: 32px 24px;
@@ -878,7 +878,7 @@
       border-radius: 16px;
       margin-top: 12px;
       padding: 24px;
-      border: 2px solid rgba(230,57,70,0.15);
+      border: 2px solid rgba(0,153,255,0.15);
     }
     .keynote-card-inner {
       display: flex;
@@ -890,7 +890,7 @@
       min-width: 80px;
       height: 80px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #1a1a2e, #302b63);
+      background: linear-gradient(135deg, #333333, #F0F8FF);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -903,7 +903,7 @@
     .keynote-meta h4 {
       font-size: 0.65rem;
       font-weight: 700;
-      color: #e63946;
+      color: #0099FF;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin-bottom: 2px;
@@ -911,7 +911,7 @@
     .keynote-meta h3 {
       font-size: 1.15rem;
       font-weight: 900;
-      color: #1a1a2e;
+      color: #333333;
       margin-bottom: 2px;
     }
     .keynote-meta h3 small {
@@ -922,7 +922,7 @@
     }
     .keynote-theme {
       display: inline-block;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       color: #fff;
       font-size: 0.85rem;
       font-weight: 700;
@@ -945,7 +945,7 @@
       font-size: 0.7rem;
       font-weight: 600;
       background: #f0f0f8;
-      color: #302b63;
+      color: #F0F8FF;
       padding: 3px 12px;
       border-radius: 50px;
       white-space: nowrap;
@@ -955,12 +955,12 @@
       padding: 16px;
       background: #fafafa;
       border-radius: 10px;
-      border-left: 4px solid #e63946;
+      border-left: 4px solid #0099FF;
     }
     .keynote-why h5 {
       font-size: 0.75rem;
       font-weight: 700;
-      color: #e63946;
+      color: #0099FF;
       margin-bottom: 6px;
       letter-spacing: 0.05em;
     }
@@ -980,7 +980,7 @@
       content: '▸';
       position: absolute;
       left: 0;
-      color: #e63946;
+      color: #0099FF;
       font-weight: 700;
     }
     @media (max-width: 768px) {
@@ -1035,7 +1035,7 @@
       font-size: 0.65rem;
       font-weight: 700;
       letter-spacing: 0.15em;
-      color: #ff6b6b;
+      color: #00D4FF;
       display: block;
       margin-bottom: 4px;
     }
@@ -1114,7 +1114,7 @@
     }
     .form-group label .required {
       display: inline-block;
-      background: #e63946;
+      background: #0099FF;
       color: #fff;
       font-size: 0.65rem;
       padding: 1px 8px;
@@ -1151,7 +1151,7 @@
     }
     .form-group input:focus,
     .form-group textarea:focus {
-      border-color: #ff6b6b;
+      border-color: #00D4FF;
       background: rgba(255,255,255,0.1);
     }
     .form-group textarea {
@@ -1165,13 +1165,13 @@
     }
     .form-group .error-msg {
       font-size: 0.78rem;
-      color: #ff6b6b;
+      color: #00D4FF;
       margin-top: 4px;
       display: none;
     }
     .form-group.has-error input,
     .form-group.has-error textarea {
-      border-color: #ff6b6b;
+      border-color: #00D4FF;
     }
     .form-group.has-error .error-msg {
       display: block;
@@ -1191,7 +1191,7 @@
       justify-content: center;
       gap: 8px;
       width: 100%;
-      background: linear-gradient(135deg, #e63946, #ff6b6b);
+      background: linear-gradient(135deg, #0099FF, #00D4FF);
       color: #fff;
       font-size: 1.1rem;
       font-weight: 700;
@@ -1200,13 +1200,13 @@
       border: none;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 30px rgba(230,57,70,0.4);
+      box-shadow: 0 8px 30px rgba(0,153,255,0.4);
       font-family: 'Noto Sans JP', sans-serif;
       margin-top: 8px;
     }
     .form-submit-btn:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(230,57,70,0.5);
+      box-shadow: 0 12px 40px rgba(0,153,255,0.5);
     }
     .form-submit-btn:disabled {
       opacity: 0.6;
@@ -1252,12 +1252,12 @@
     }
     .thankyou-screen .thankyou-highlight {
       display: inline-block;
-      background: rgba(230,57,70,0.2);
-      border: 1px solid rgba(230,57,70,0.4);
+      background: rgba(0,153,255,0.2);
+      border: 1px solid rgba(0,153,255,0.4);
       border-radius: 10px;
       padding: 16px 24px;
       margin-top: 20px;
-      color: #ff6b6b;
+      color: #00D4FF;
       font-weight: 700;
       font-size: 0.95rem;
     }
@@ -1398,9 +1398,9 @@
       <div class="program-flow">
         <!-- STEP 0 - 合同入社式 -->
         <div class="program-step reveal">
-          <div class="program-step-marker" style="background: linear-gradient(135deg, #1a1a2e, #302b63);">STEP<br>00</div>
+          <div class="program-step-marker" style="background: linear-gradient(135deg, #333333, #F0F8FF);">STEP<br>00</div>
           <div class="program-step-content" style="background: linear-gradient(135deg, #f8f9fa, #f0f0f8);">
-            <span class="program-step-tag" style="background: #1a1a2e; color: #fff;">合同入社式 &#8212; DAY1 午前</span>
+            <span class="program-step-tag" style="background: #333333; color: #fff;">合同入社式 &#8212; DAY1 午前</span>
             <h3>合同入社式 &amp; 基調講演</h3>
             <p>熊本の複数企業が一堂に会する合同入社式。企業の枠を越えた「地域の同期」が生まれる瞬間です。そして、基調講演には元サッカー日本代表・太田宏介氏が登壇。</p>
 
@@ -1591,11 +1591,11 @@
         </div>
         <div class="overview-row">
           <div class="overview-label">&#128101; 定員</div>
-          <div class="overview-value">30名（1社あたり最大5名）<br><small style="color:#e63946; font-weight:700;">※先着順・定員になり次第締切</small></div>
+          <div class="overview-value">30名（1社あたり最大5名）<br><small style="color:#0099FF; font-weight:700;">※先着順・定員になり次第締切</small></div>
         </div>
         <div class="overview-row">
           <div class="overview-label">&#128198; 申込締切</div>
-          <div class="overview-value"><strong style="color:#e63946; font-size:1.1rem;">2026年3月10日（火）</strong></div>
+          <div class="overview-value"><strong style="color:#0099FF; font-size:1.1rem;">2026年3月10日（火）</strong></div>
         </div>
         <div class="overview-row">
           <div class="overview-label">&#128188; 主催</div>
@@ -1634,7 +1634,7 @@
         </div>
       </div>
       <div style="margin-top:36px;" class="reveal">
-        <a href="#cta" class="btn-primary" style="background:#fff; color:#e63946; box-shadow: 0 8px 30px rgba(0,0,0,0.2);">&#9993; 詳細を聞く・申し込む</a>
+        <a href="#cta" class="btn-primary" style="background:#fff; color:#0099FF; box-shadow: 0 8px 30px rgba(0,0,0,0.2);">&#9993; 詳細を聞く・申し込む</a>
       </div>
     </div>
   </section>
@@ -1749,11 +1749,11 @@
         <h3>お問い合わせありがとうございます！</h3>
         <p>
           ご入力いただいた内容を受け付けました。<br class="br-pc">
-          担当者より<strong style="color:#ff6b6b;">2営業日以内</strong>にご連絡いたしますので、今しばらくお待ちくださいませ。
+          担当者より<strong style="color:#00D4FF;">2営業日以内</strong>にご連絡いたしますので、今しばらくお待ちくださいませ。
         </p>
         <p>
           万が一ご連絡がない場合は、お手数ですが下記までご連絡ください。<br class="br-pc">
-          <a href="mailto:info@aikasu.jp" style="color:#ff6b6b; text-decoration:underline;">info@aikasu.jp</a>
+          <a href="mailto:info@aikasu.jp" style="color:#00D4FF; text-decoration:underline;">info@aikasu.jp</a>
         </p>
         <div class="thankyou-highlight">
           &#128197; 開催日：2026年4月1日（水）13:00〜 / 2日（木）9:30〜<br class="br-pc">
@@ -1959,7 +1959,7 @@
         draw() {
           ctx.beginPath();
           ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(255,107,107,${this.opacity})`;
+          ctx.fillStyle = `rgba(0,212,255,${this.opacity})`;
           ctx.fill();
         }
       }
@@ -1982,7 +1982,7 @@
               ctx.beginPath();
               ctx.moveTo(particles[i].x, particles[i].y);
               ctx.lineTo(particles[j].x, particles[j].y);
-              ctx.strokeStyle = `rgba(255,107,107,${0.08 * (1 - dist / 120)})`;
+              ctx.strokeStyle = `rgba(0,212,255,${0.08 * (1 - dist / 120)})`;
               ctx.lineWidth = 0.5;
               ctx.stroke();
             }
