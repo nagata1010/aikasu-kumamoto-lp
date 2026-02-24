@@ -1879,41 +1879,21 @@
         formData.forEach((value, key) => { data[key] = value; });
 
         // ======================================================
-        // ▼ Googleフォーム連携
-        // GoogleフォームのプリフィルURLから各entry IDを取得し、
-        // 下記のGOOGLE_FORM_ACTION_URLとentry.XXXXXXを差し替えてください。
-        //
-        // 例: fetch('https://docs.google.com/forms/d/e/XXXXX/formResponse', {
-        //       method: 'POST',
-        //       mode: 'no-cors',
-        //       body: googleFormData
-        //     });
+        // ▼ Google Apps Script 連携
+        // 下記URLをデプロイ後のウェブアプリURLに差し替えてください
         // ======================================================
+        const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-eJZUzXwP_j967qfDLqLpNk-59C6bAcTk1dA8SWgyfXBFD9PsDjYRHK1n9ws6s6y7_g/exec';
 
-        // Googleフォームへ送信（URLを設定後に有効化）
-        /*
-        var googleFormData = new FormData();
-        googleFormData.append('entry.XXXXXXX', data.company);
-        googleFormData.append('entry.XXXXXXX', data.position);
-        googleFormData.append('entry.XXXXXXX', data.fullname);
-        googleFormData.append('entry.XXXXXXX', data.email);
-        googleFormData.append('entry.XXXXXXX', data.phone);
-        googleFormData.append('entry.XXXXXXX', data.meeting_dates);
-        googleFormData.append('entry.XXXXXXX', data.message);
-
-        fetch('GOOGLE_FORM_ACTION_URL', {
+        fetch(APPS_SCRIPT_URL, {
           method: 'POST',
           mode: 'no-cors',
-          body: googleFormData
+          headers: { 'Content-Type': 'text/plain' },
+          body: JSON.stringify(data)
         }).then(() => {
           showThankyou();
         }).catch(() => {
-          showThankyou(); // no-cors always returns opaque
+          showThankyou();
         });
-        */
-
-        // デモ用：1秒後にサンクス画面を表示（Google Form連携後はこの行を削除）
-        setTimeout(showThankyou, 1000);
 
         function showThankyou() {
           formWrapper.style.display = 'none';
