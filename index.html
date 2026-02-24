@@ -1884,16 +1884,30 @@
         // ======================================================
         const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-eJZUzXwP_j967qfDLqLpNk-59C6bAcTk1dA8SWgyfXBFD9PsDjYRHK1n9ws6s6y7_g/exec';
 
-        fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'text/plain' },
-          body: JSON.stringify(data)
-        }).then(() => {
-          showThankyou();
-        }).catch(() => {
-          showThankyou();
+        // hidden form + iframe で確実にPOSTを届ける
+        var iframe = document.createElement('iframe');
+        iframe.name = 'gas_target';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+
+        var hiddenForm = document.createElement('form');
+        hiddenForm.method = 'POST';
+        hiddenForm.action = APPS_SCRIPT_URL;
+        hiddenForm.target = 'gas_target';
+
+        Object.entries(data).forEach(function([key, value]) {
+          var input = document.createElement('input');
+          input.type = 'hidden';
+          input.name = key;
+          input.value = value;
+          hiddenForm.appendChild(input);
         });
+
+        document.body.appendChild(hiddenForm);
+        hiddenForm.submit();
+        document.body.removeChild(hiddenForm);
+
+        setTimeout(showThankyou, 1500);
 
         function showThankyou() {
           formWrapper.style.display = 'none';
