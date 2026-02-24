@@ -1,3 +1,10 @@
+// ========================================
+// スプレッドシートIDを設定してください
+// （スプレッドシートURLの /d/ と /edit の間の文字列）
+// 例: https://docs.google.com/spreadsheets/d/XXXXXX/edit
+// ========================================
+var SPREADSHEET_ID = 'ここにスプレッドシートIDを貼り付け';
+
 function doPost(e) {
   try {
     var data = e.parameter;
@@ -9,6 +16,10 @@ function doPost(e) {
     var meetingDates = data.meeting_dates || '';
     var message = data.message || '';
 
+    // === スプレッドシートにデータ蓄積 ===
+    saveToSpreadsheet(company, position, fullname, email, phone, meetingDates, message);
+
+    // === メール通知 ===
     var recipients = [
       'info@aikasu.jp',
       'abe.keisuke@aikasu.jp',
@@ -34,6 +45,7 @@ function doPost(e) {
       MailApp.sendEmail({ to: to, subject: subject, body: body, replyTo: email });
     });
 
+    // === 自動返信 ===
     var autoReplySubject = '【株式会社AIKASU】お問い合わせありがとうございます';
     var autoReplyBody = fullname + ' 様\n\nこの度はお問い合わせいただき、誠にありがとうございます。\n以下の内容で受け付けいたしました。\n\n企業名：' + company + '\nお名前：' + fullname + '\nお打ち合わせ候補日：\n' + meetingDates + '\n\n担当者より2営業日以内にご連絡いたします。\n今しばらくお待ちくださいませ。\n\n株式会社AIKASU\ninfo@aikasu.jp\n';
 
@@ -43,4 +55,25 @@ function doPost(e) {
   } catch (error) {
     return ContentService.createTextOutput('Error: ' + error.toString());
   }
+}
+
+// === スプレッドシート書き込み関数 ===
+function saveToSpreadsheet(company, position, fullname, email, phone, meetingDates, message) {
+  var ss = SpreadsheetApp.openById(SPREADSHEET_ID);
+  var sheet = ss.getSheetByName('問い合わせ一覧') || ss.getSheets()[0];
+
+  // ヘッダーが無ければ自動作成
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(['受付日時', '企業名', 'お役職', 'お名前', 'メールアドレス', '電話番号', 'お打ち合わせ候補日', 'その他ご質問・ご要望', '対応状況']);
+    // ヘッダー行の書式設定
+    var headerRange = sheet.getRange(1, 1, 1, 9);
+    headerRange.setFontWeight('bold');
+    headerRange.setBackground('#0099FF');
+    headerRange.setFontColor('#FFFFFF');
+    sheet.setFrozenRows(1);
+  }
+
+  // データを追記
+  var timestamp = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyy/MM/dd HH:mm:ss');
+  sheet.appendRow([timestamp, company, position, fullname, email, phone, meetingDates, message, '未対応']);
 }
